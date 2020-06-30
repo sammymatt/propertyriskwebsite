@@ -1,7 +1,9 @@
 from django.http import HttpResponse
+from django.template import loader
 from django.shortcuts import render
 
-# Views
+from .models import Question
+
+
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
-    #return render(request, 'proprisk/index.html')
+    return render(request, 'proprisk/index.html')    
