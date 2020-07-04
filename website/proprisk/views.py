@@ -6,4 +6,7 @@ from .models import Question
 
 
 def index(request):
-    return render(request, 'proprisk/index.html')    
+    return render(request, 'proprisk/index.html')
+
+def about(request):
+    return render(request, 'proprisk/about.html')    
