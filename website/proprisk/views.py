@@ -10,3 +10,9 @@ def index(request):
 
 def about(request):
     return render(request, 'proprisk/about.html')    
+
+def contact(request):
+    return render(request, 'proprisk/contact.html')    
+
+def quote(request):
+    return render(request, 'proprisk/quote.html')
