@@ -1,27 +1,252 @@
-{% extends "proprisk/base.html" %}
-{% block content %}
-<div class="bg-white py-5">
-    <div class="container py-5">
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-globe fa-2x mb-3 text-primary"></i>
-          <h2 class="font-weight-light">BlueSky Consulting Ltd</h2>
-          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          
-          <!--<a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>--> 
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4481cd3aff.js" crossorigin="anonymous"></script>
+    <style>
+    .footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color: #262424;
+      color: #FFF;
+    }
+    p {
+        color: white;  
+        font-size: 12px;
+        line-height: 100%;
+    }
+    h2 {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+    .navbar {
+        background-color: #23415C;
+        font-size: 1.2em;
+    }
+    #home {
+        background: url(img.jpg) no-repeat center center fixed;
+        display: table;
+        height: 100%;
+        position: relative;
+        width: 100%;
+        background-size: cover;
+    }
+    .landing-text {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        color: #262424;
+    }
+    .landing-text h1 {
+        font-size: 500%;
+        font-weight: 700%;
+    }
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <title>About BlueSky</title>
+  </head>
+  <body>
+      
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">
+        <img src="logo2.png" width="30" height="30" alt="">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+      </nav>
+
+      <div class="bg-white py-5">
+        <div class="container py-5">
+          <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-globe fa-2x mb-3 text-primary"></i>
+              <h2 class="font-weight-light">BlueSky Consulting Ltd</h2>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              
+              <!--<a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>--> 
+            </div>
+            <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+          </div>
+          <!--<div class="row align-items-center">
+            <div class="col-lg-5 px-5 mx-auto"><img src="https://images.unsplash.com/photo-1526597796581-efa2fc6087ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+            <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+              <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+            </div>-->
+          </div>
+        </div>
       </div>
-      <!--<div class="row align-items-center">
-        <div class="col-lg-5 px-5 mx-auto"><img src="https://images.unsplash.com/photo-1526597796581-efa2fc6087ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-        <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-          <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
-          <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
-        </div>-->
+
+      <div class="footer">
+      <footer class="page-footer font-small mdb-color pt-4">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+      
+          <!-- Footer links -->
+          <div class="row text-center text-md-left mt-3 pb-3">
+      
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">BlueSky Consultants</h6>
+              <p>Here at BlueSky Consultants we provide loads of stuff yada yada.
+              </p>
+            </div>
+            <!-- Grid column -->
+      
+            <hr class="w-100 clearfix d-md-none">
+      
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6>
+              <p>
+                <a href="#!">Abestos</a>
+              </p>
+              <p>
+                <a href="#!">Risk Managemment</a>
+              </p>
+              <p>
+                <a href="#!">Legionella Assessment</a>
+              </p>
+              <p>
+                <a href="#!">Fire Risk Assessment</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+      
+            <hr class="w-100 clearfix d-md-none">
+      
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+              <p>
+                <a href="#!">Home</a>
+              </p>
+              <p>
+                <a href="#!">About</a>
+              </p>
+              <p>
+                <a href="#!">Contact</a>
+              </p>
+              <p>
+                <a href="#!">Services</a>
+              </p>
+            </div>
+      
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+      
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p>
+                <i class="fas fa-home mr-3"></i>Southend</p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>info@bluesky.com</p>
+              <p>
+                <i class="fas fa-phone mr-3"></i>0788888888</p>
+             <!-- <p>
+                <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>-->
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Footer links -->
+      
+          <hr>
+      
+          <!-- Grid row -->
+          <div class="row d-flex align-items-center">
+      
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+      
+              <!--Copyright-->
+              <p class="text-center text-md-left">© 2020 BlueSky Consultants Ltd
+              </p>
+      
+            </div>
+            <!-- Grid column -->
+      
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+      
+              <!-- Social buttons -->
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+      
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row -->
+      
+        </div>
+        <!-- Footer Links -->
+      
+      </footer>
       </div>
-    </div>
-  </div>
-{% endblock content %}
+  </body>
+</html>
